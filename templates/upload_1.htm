@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<title >Upload page</title>
+<style>
+button {
+  background-color:transparent;
+  cursor: pointer;
+  width: 310px; height: 94px; left: 0px; top: 0px; position: absolute;
+  z-index: 3;
+  
+}
+div {
+  z-index: 1;
+}
+</style>
+  <head>
+<div style="width: 100%; height: 100%; position: relative; background: white">
+    <div style="width: 200px; height: 180px; left: 111px; top: 101px; position: absolute">
+	<img src="../static/upload_1page/Group_19.png" alt="404 no found">
+        
+    </div>
+    <div style="width: 200px; height: 200px; left: 825px; top: 101px; position: absolute">
+	<img src="../static/upload_1page/Group_20.png" alt="404 no found">
+        
+    </div>
+    <div style="left: 106px; top: 385px; position: absolute; color: black; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word">Local</div>
+    <div style="left: 825px; top: 385px; position: absolute; color: black; font-size: 50px; font-family: Inter; font-weight: 400; word-wrap: break-word">Cloud</div>
+    <div style="width: 846px; height: 0px; left: 756px; top: 62px; position: absolute; transform: rotate(90deg); transform-origin: 0 0; border: 5px black solid"></div>
+    <div style="width: 573px; height: 196px; left: 106px; top: 491px; position: absolute; color: black; font-size: 35px; font-family: Inter; font-weight: 400; word-wrap: break-word">You can upload your image from local device, such as your PC、smartphone or other device.</div>
+    <div style="width: 573px; height: 196px; left: 825px; top: 491px; position: absolute; color: black; font-size: 35px; font-family: Inter; font-weight: 400; word-wrap: break-word">You can upload your image from cloud storage device, such as google drive or other cloud drive.</div>
+    <div style="width: 310px; height: 94px; left: 156px; top: 759px; position: absolute">
+	<form id="form" method="POST" action="./second.htm" enctype=multipart/form-data>
+	<input style="display:none" type="file" id="my-local-file" name="my-local-file" >
+	<button type="button" onclick="get_img()"></button>
+	</form>
+        <div style="width: 310px; height: 94px; left: 0px; top: 0px; position: absolute; background: #0500FF"></div>
+        <div style="left: 64px; top: 26px; position: absolute; color: white; font-size: 35px; font-family: Inter; font-weight: 400; word-wrap: break-word">Upload</div>
+        <div style="width: 30px; height: 30px; left: 232px; top: 30px; position: absolute">
+	    <img src="../static/upload_1page/Group_17.png" alt="404 no found">
+            
+        </div>
+    </div>
+    <div style="width: 310px; height: 94px; left: 925px; top: 759px; position: absolute">
+        <div style="width: 310px; height: 94px; left: 0px; top: 0px; position: absolute; background: #0500FF"></div>
+        <div style="left: 64px; top: 26px; position: absolute; color: white; font-size: 35px; font-family: Inter; font-weight: 400; word-wrap: break-word">Upload</div>
+        <div style="width: 30px; height: 30px; left: 232px; top: 30px; position: absolute">
+	    <img src="../static/upload_1page/Group_17.png" alt="404 no found">
+            
+        </div>
+    </div>
+</div>
+</head>
+  <body>
+    <script>
+	document.getElementById('my-local-file').addEventListener("change", handleFiles);	
+	function get_img(){
+		document.getElementById('my-local-file').click();	
+	}
+	function handleFiles(){
+		document.getElementById("form").submit();
+	}
+    </script>
+  </body>
+</html>
